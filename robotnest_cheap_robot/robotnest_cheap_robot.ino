@@ -1,7 +1,6 @@
 // C++ code
 //
 #include <SoftwareSerial.h>
-#include <Servo.h>
 
 SoftwareSerial mySerial(10, 11); // RX, TX
 
@@ -19,16 +18,13 @@ int maxServoAngle = 180;
 int minServoAngle = 30;
 
 int motorPin = 12;
-int servoPin = 13;
-
-Servo myServo;
 
 String receivedStringBT;
 
 void setup()
 {
-  Serial.begin(38400);
-  mySerial.begin(38400);
+  Serial.begin(9600);
+  mySerial.begin(9600);
   mySerial.println("start bt");
   Serial.println("start usb");
   pinMode(leftMotorA, OUTPUT);
@@ -36,8 +32,8 @@ void setup()
   pinMode(rightMotorA, OUTPUT);
   pinMode(rightMotorB, OUTPUT);
   pinMode(motorPin, OUTPUT);
-  myServo.attach(servoPin);
-  myServo.write(servoAngle);
+  pinMode(10, INPUT);
+  pinMode(11, OUTPUT);
 }
 
 void loop()
@@ -57,28 +53,6 @@ void loop()
     // F B L R
     switch(inputFromUser) {
 
-      case 'q':
-      while(mySerial.available() == 0){
-        if (servoAngle >= maxServoAngle) {
-          servoAngle = maxServoAngle;
-        } else {
-          servoAngle += 0.01;
-          myServo.write(servoAngle);
-        }
-      }
-      break;
-
-      case 'a':
-      while(mySerial.available() == 0){
-        if (servoAngle <= minServoAngle) {
-          servoAngle = minServoAngle;
-        } else {
-          servoAngle -= 0.01;
-          myServo.write(servoAngle);
-        }
-      }
-      break;
-
       case 't':
       if(motorState) {
         digitalWrite(motorPin, 0);
@@ -92,8 +66,8 @@ void loop()
 
       case 'f':
 
-      digitalWrite(leftMotorA, HIGH);
-      digitalWrite(leftMotorB, LOW);
+      digitalWrite(leftMotorA, LOW);
+      digitalWrite(leftMotorB, HIGH);
       digitalWrite(rightMotorA, HIGH);
       digitalWrite(rightMotorB, LOW);
 
