@@ -1,4 +1,23 @@
 # "Lētā robota" Robotnest Pamācība
+## Nepieciešamās detaļas:
+- Finiera pamatne (pieejams rasējums .dxf faila formātā)
+- 2x Finiera starplikas (pieejams rasējums .dxf faila formātā)
+- Ieroča motora Finiera turētājs (pieejams rasējums .dxf faila formātā)
+- Finiera ierocis kurš stiprinās pie motora (pieejams rasējums .dxf faila formātā)
+- M3 skrūves ar M3 muciņām
+- DC motors priekš ieroča
+- 2x small dc gear motori priekš riteņiem
+- 2x small dc gear motor turētāji
+- 2x riteņi un 2x riepas
+Ja jums ir komplekts tad visas agustāk minētās komponentes jau ir sagatavotas un saliktas kā nepieciešams.
+- Arduino nano
+- HC-05 (bluetooth modelis)
+- BC547 (tranzistors)
+- L9110 Motora draiveris
+- Breadboards vai jau gatava plate
+- Nepieciešamie vadi
+
+
 ## Savienošanas shēma:
 ### Arduino ar Bluetooth
 |Arduino nano|Bluetooth hc05|
