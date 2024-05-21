@@ -9,7 +9,9 @@
 - 2x small dc gear motori priekš riteņiem
 - 2x small dc gear motor turētāji
 - 2x riteņi un 2x riepas
+
 Ja jums ir komplekts tad visas agustāk minētās komponentes jau ir sagatavotas un saliktas kā nepieciešams.
+
 - Arduino nano
 - HC-05 (bluetooth modelis)
 - BC547 (tranzistors)
