@@ -53,3 +53,12 @@ Ja jums ir komplekts tad visas agustāk minētās komponentes jau ir sagatavotas
 |Kreisā motora Melnais vads|OA (B motora izvade)|
 |Labā motora Sarkanais vads|OB (A motora izvade)|
 |Labā motora Melnais vads|OA (A motora izvade)|
+
+## Bluetooth aplikācija
+Nosaukums: Arduino Bluetooth Controller, Izstrādāja: Giristudio
+
+No sākuma savienojam bluetooth caur telefonu un ievadam paroli: 1234
+
+Pēctam ieejam aplikācijā un pie paired devices atjaunojam skatu un uzspiežam uz mūsu bluetooth: hc-05
+
+Pēc tam pie iestatījumiem kur ir bultām press un release, saliekam attiecīgos butrtus augšējā bulta - f, apakšējā bulta - b, kreisā bulta - l, labā bulta - r, trisstūris - t. Un visur kur ir release tur liekam 0.
